@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+<body>
+    <p></p>
+    <button>Ok</button>
+</body>
+<script>
+    // function result(sum){
+    //     document.querySelector('p').textContent = sum;
+    // }
+    // function getData(num1,num2)
+    // {
+    //     let sum = num1 + num2;
+    //     return sum;
+    // }
+    // let resul = getData(5,5);
+    // result(resul);
+    // function result(sum){
+    //     document.querySelector('p').textContent = sum;
+    // }
+    // function getData(num1,num2)
+    // {
+    //     let sum = num1 + num2;
+    //     result(sum);
+    // }
+    // let resul = getData(5,5);
+
+
+    // Asynchoronous 
+
+    // let p = document.querySelector('p');
+    // p.textContent = 'Hello World';
+    // setTimeout(() =>{
+    // alert('Disturbed');
+
+    // },1000)
+    // p.style.color = 'red';
+
+    // let p = document.querySelector('p');
+    // p.textContent = 'Afnan';
+    // let val = function(){
+    //     alert('Ayaz');
+    // }
+    // p.style.color = 'blue';
+    // setTimeout(val,2000);
+
+    // let p = document.querySelector('p');
+
+    // let val = function com()
+    // {
+    //     p.textContent = 'World Hello';
+    //     p.style.color = 'blue';
+    // }
+    // let theValue = setTimeout(val,2000);
+
+    // document.querySelector('button').addEventListener('click',() => {
+    //     clearTimeout(theValue);
+    //     p.textContent = 'Block';
+    // });
+    // let i = 0;
+    
+    // let num = function(){
+    //     i = parseInt(i)
+    //     let p = document.querySelector('p');
+    //     p.textContent = i++;
+    // }
+    // setInterval(num,1000000);
+
+    let getTime = function()
+    {
+        let d = new Date();
+        document.querySelector('p').textContent = `${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()} : ${d.getMilliseconds()}`;
+    }
+    let clearTime = setInterval(getTime,100);
+    document.querySelector('button').onclick = () => {
+        clearInterval(clearTime);
+    }
+</script>
+</html>
