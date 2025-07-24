@@ -72,14 +72,25 @@
     // }
     // setInterval(num,1000000);
 
-    let getTime = function()
-    {
-        let d = new Date();
-        document.querySelector('p').textContent = `${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()} : ${d.getMilliseconds()}`;
-    }
-    let clearTime = setInterval(getTime,100);
-    document.querySelector('button').onclick = () => {
-        clearInterval(clearTime);
-    }
+    // let getTime = function()
+    // {
+    //     let d = new Date();
+    //     document.querySelector('p').textContent = `${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()} : ${d.getMilliseconds()}`;
+    // }
+    // let clearTime = setInterval(getTime,100);
+    // document.querySelector('button').onclick = () => {
+    //     clearInterval(clearTime);
+    // }
+    
+    
+    function fullName(nam){
+        console.log('My Nmame is '+nam)
+        }
+            function getName(myCallBack){
+                let nam = 'Ali';
+                myCallBack(nam);
+            }
+
+    getName(fullName);
 </script>
 </html>
